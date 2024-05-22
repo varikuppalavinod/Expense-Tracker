@@ -1,10 +1,10 @@
-import ExpenseItem from "./components/ExpenseItem";
+import Countercomponent from "./components/Countercomponent";
 
 function App() {
   return (
     <div>
       <h1>Let's get Started</h1>
-      <ExpenseItem></ExpenseItem>
+      <Countercomponent></Countercomponent>
     </div>
   );
 }
