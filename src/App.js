@@ -1,11 +1,9 @@
-import Countercomponent from "./components/Countercomponent";
+import Counter from './components/Counter';
+
 
 function App() {
   return (
-    <div>
-      <h1>Let's get Started</h1>
-      <Countercomponent></Countercomponent>
-    </div>
+    <Counter />
   );
 }
 
