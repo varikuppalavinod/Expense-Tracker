@@ -1,16 +1,10 @@
+import Counter from './components/Counter';
 
-import Form from "./components/Form";
-
-import Account from "./components/Account";
 
 function App() {
   return (
-    <>
-      <Form />
-      <Account />
-    </>
+    <Counter />
   );
 }
 
 export default App;
-
