@@ -1,3 +1,4 @@
+/*
 import "./ExpenseItem.css";
 
 function ExpenseItem() {
@@ -19,3 +20,4 @@ function ExpenseItem() {
 }
 
 export default ExpenseItem;
+*/
