@@ -1,13 +1,38 @@
-import Form from "./components/Form";
-
-import Account from "./components/Account";
+import { useDispatch, useSelector } from "react-redux";
+import { addTodo } from "./components/actions";
+import { useState } from "react";
+import TodoList from "./components/TodoList";
 
 function App() {
+  const dispatch = useDispatch();
+
+  const [todoTitle, setTodoTitle] = useState("");
+  const handleTodo = () => {
+    if (todoTitle.trim()) {
+      const newTodo = {
+        title: todoTitle,
+      };
+      dispatch(addTodo(newTodo));
+      setTodoTitle("");
+    }
+  };
+
   return (
-    <>
-      <Form />
-      <Account />
-    </>
+    <div className="container mt-5 w-50">
+      <h3 className="text-primary text-center">Todo app using redux react</h3>
+      <div className="input-group">
+        <input
+          type="text"
+          className="form-control"
+          value={todoTitle}
+          onChange={(e) => setTodoTitle(e.target.value)}
+        />
+        <button className="btn btn-primary" onClick={() => handleTodo()}>
+          Add
+        </button>
+      </div>
+      <TodoList />
+    </div>
   );
 }
 
